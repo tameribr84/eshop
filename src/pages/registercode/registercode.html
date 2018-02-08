@@ -1,0 +1,28 @@
+<!--
+  Generated template for the RegistercodePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>registercode</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="ver_title">
+    <h4> Verify your phone</h4>
+    <p>Verficaton has been send to 0451234567, please enter the verification code: </p>
+  </div>
+  <div class="ver_info">
+    <input type="text">
+    <button ion-button class="resend_btn">Resend in 60s</button>
+  </div>
+
+  <button class="ver_next" ion-button color="danger" (click)="goPwd()" >Next</button>
+
+</ion-content>

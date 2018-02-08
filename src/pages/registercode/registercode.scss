@@ -1,0 +1,46 @@
+page-registercode {
+
+}
+
+.ver_title{
+    h4{
+     text-align: center;   
+     //font-size: 10px;
+    }
+    p{
+    text-align: start;
+    }    
+}
+
+.ver_info{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+
+    input{
+        flex: 1;
+        display: block;
+        
+        height: 3.6rem;
+        border: 1px solid #eeeeee;
+        margin: 0 auto;
+    }
+    button{
+        width: 10rem;
+        font-size: 1.4rem;
+       
+        height: 3.6rem;
+
+        margin-left: 1rem;
+        background: #eeeeee;
+        color: #666666;
+        
+    }
+}
+
+.ver_next{
+    display: block;
+    width: 80%;
+    margin: 2rem auto;
+}

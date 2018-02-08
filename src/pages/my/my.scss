@@ -1,0 +1,23 @@
+page-my {
+
+}
+
+
+.login{
+    border-bottom: 1px solid #eee;
+    margin: 20px 0px;
+    text-align: center;
+    .userimg{
+        img{
+            widows: 5rem;
+            height: 5rem;
+            border-radius: 100%;
+        }
+
+    }
+    
+}
+
+ion-item-divider {
+    min-height: 10px !important;
+}

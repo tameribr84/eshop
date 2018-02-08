@@ -8,6 +8,21 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
+
+// Import New Tabs
+import { CategoriesPage } from '../pages/categories/categories';
+import { CartPage } from '../pages/cart/cart';
+import { MyPage } from '../pages/my/my';
+
+
+// Import New Pages
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
+import { RegistercodePage } from '../pages/registercode/registercode';
+import { RegisterpasswordPage} from '../pages/registerpassword/registerpassword';
+
+// Import Search Page
+import { SearchPage } from '../pages/search/search';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -17,11 +32,22 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    CategoriesPage,
+    CartPage,
+    MyPage,
+    LoginPage,
+    RegisterPage,
+    RegistercodePage,
+    RegisterpasswordPage,
+    SearchPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    //IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+      tabsHideOnSubPages: 'true' // Hide Taps on sub pages
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -29,7 +55,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    CategoriesPage,
+    CartPage,
+    MyPage,
+    LoginPage,
+    RegisterPage,
+    RegistercodePage,
+    RegisterpasswordPage,
+    SearchPage
   ],
   providers: [
     StatusBar,
