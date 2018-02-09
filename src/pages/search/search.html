@@ -9,16 +9,62 @@
   <!-- <ion-navbar>
     <ion-title>search</ion-title>
   </ion-navbar> -->
-  <ion-toolbar>
-    <ion-searchbar>
-      
+  <ion-navbar>
+    <ion-searchbar (ionInput)="getItems($event)">
     </ion-searchbar>
-    Search
-  </ion-toolbar>
+
+    <ion-buttons end>
+      <button ion-button class="search_btn">Search</button>
+    </ion-buttons>
+  </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <div class="search_content" *ngIf="!flag">
+
+    <div class="most_searched">
+      <h3 class="search_title">Most Searched</h3>
+      <p>
+        <span>E-Readers</span>
+        <span>Electronics</span>
+        <span>Shoes</span>
+        <span>Clothing</span>
+        <span>E-Readers</span>
+        <span>Electronics</span>
+      </p>
+    </div>
+
+    <div class="search_history">
+      <h3>Search History</h3>
+      <ion-list>
+        <!-- <button ion-item *ngFor="let item of search_list">
+        {{item}}
+      </button> -->
+        <ion-item *ngFor="let item of search_list" (click)="onItem()">{{item}}</ion-item>
+      </ion-list>
+
+      <button ion-button icon-left outline>
+        <ion-icon name="ios-trash-outline"></ion-icon>
+        Clear Search History
+      </button>
+    </div>
+  </div>
+
+  <div class="search_list" *ngIf="flag">
+    <ion-list >
+      <ion-item *ngFor="let item of list">
+        <ion-thumbnail item-start>
+          <img src={{item.pic}}>
+        </ion-thumbnail>
+        <h2>Product Name</h2>
+        <p>Price</p>
+      </ion-item>
+    </ion-list>
+  </div>
+
+
 
 </ion-content>

@@ -1,3 +1,37 @@
 page-search {
 
 }
+
+.search_btn{
+    
+}
+.most_searched{
+    h3{
+        font-size: 1.4rem;
+        text-align: start;
+    }
+    p{    
+        span{
+            display: inline-block;
+            background: #eeeeee;
+            padding: .3rem;
+            margin: 0.5rem;
+            border-radius: .5rem;
+        }        
+    }
+}
+
+.search_history{
+    h3{
+        font-size: 1.4rem;
+    }
+    button{
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+}
+
+.search_list{
+}
