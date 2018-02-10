@@ -8,6 +8,9 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
+// Import Http Module
+import { HttpClientModule } from '@angular/common/http';
+
 
 // Import New Tabs
 import { CategoriesPage } from '../pages/categories/categories';
@@ -25,6 +28,8 @@ import { RegisterpasswordPage} from '../pages/registerpassword/registerpassword'
 import { SearchPage } from '../pages/search/search';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ConfigProvider } from '../providers/config/config';
+import { HttpServiceProvider } from '../providers/http-service/http-service';
 
 @NgModule({
   declarations: [
@@ -44,6 +49,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     //IonicModule.forRoot(MyApp)
     IonicModule.forRoot(MyApp,{
       tabsHideOnSubPages: 'true' // Hide Taps on sub pages
@@ -68,7 +74,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ConfigProvider,
+    HttpServiceProvider
   ]
 })
 export class AppModule {}
