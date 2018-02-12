@@ -15,30 +15,28 @@
 
 <ion-content>
   <div class="cate_content">
-    <div class="cate_left">
+    <div class="cate_left" *ngIf="cateList.length>0">
 
       <ion-list>
-        <button ion-item *ngFor="let item of cateList"></button>
-        {{item}}
+        <ion-item class="cate_item" *ngFor="let item of cateList" (tap)="getProdByCate(item['_id'])" 
+        [class.active]="selected===item['_id']">
+          {{item.title}}
+        </ion-item>
+
       </ion-list>
 
     </div>
 
     <div class="cate_right">
 
-        <ion-row>
-            <ion-col col-4 *ngFor="let item of popList">
-                <img src={{item.pic}} />
-                <p> {{item.title}}</p>
-      
-            </ion-col>
-            <ion-col col-4 *ngFor="let item of popList">
-                <img src={{item.pic}} />
-                <p> {{item.title}}</p>
-      
-            </ion-col>
-          </ion-row>
-      right
+      <ion-row>
+        <ion-col col-4 *ngFor="let item of prodListByCate" [navPush]="productlistPage" [navParams]="{'cid': item['_id']}">
+          <img [src]="config.apiUrl + item.pic" />
+          <p> {{item.title}}</p>
+
+        </ion-col>
+
+      </ion-row>
     </div>
   </div>
 

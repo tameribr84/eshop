@@ -10,11 +10,11 @@
     <ion-title>search</ion-title>
   </ion-navbar> -->
   <ion-navbar>
-    <ion-searchbar (ionInput)="getItems($event)">
+    <ion-searchbar [(ngModel)]="searchQuery">
     </ion-searchbar>
 
     <ion-buttons end>
-      <button ion-button class="search_btn">Search</button>
+      <button ion-button class="search_btn" (click)="getSearchResult()">Search</button>
     </ion-buttons>
   </ion-navbar>
 
@@ -55,14 +55,19 @@
 
   <div class="search_list" *ngIf="flag">
     <ion-list >
-      <ion-item *ngFor="let item of list">
+      <ion-item *ngFor="let item of searchResult">
         <ion-thumbnail item-start>
-          <img src={{item.pic}}>
+          <img [src]= "config.apiUrl + item.pic">
         </ion-thumbnail>
-        <h2>Product Name</h2>
-        <p>Price</p>
+        <h2>{{item.title}}</h2>
+        <p>{{item.price}}</p>
       </ion-item>
     </ion-list>
+
+
+    <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
   </div>
 
 

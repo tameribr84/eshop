@@ -26,6 +26,9 @@ import { RegisterpasswordPage} from '../pages/registerpassword/registerpassword'
 
 // Import Search Page
 import { SearchPage } from '../pages/search/search';
+
+// Import Product List Page
+import { ProductlistPage } from '../pages/productlist/productlist';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ConfigProvider } from '../providers/config/config';
@@ -45,7 +48,8 @@ import { HttpServiceProvider } from '../providers/http-service/http-service';
     RegisterPage,
     RegistercodePage,
     RegisterpasswordPage,
-    SearchPage
+    SearchPage,
+    ProductlistPage
   ],
   imports: [
     BrowserModule,
@@ -69,7 +73,8 @@ import { HttpServiceProvider } from '../providers/http-service/http-service';
     RegisterPage,
     RegistercodePage,
     RegisterpasswordPage,
-    SearchPage
+    SearchPage,
+    ProductlistPage
   ],
   providers: [
     StatusBar,

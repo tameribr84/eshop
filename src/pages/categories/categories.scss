@@ -9,13 +9,69 @@ page-categories {
     display: flex;
 
     .cate_left{
-        width: 120px;
+        width: 110px;
         overflow-y: auto;
+        border-right: 8px solid #eeeeee;
+        
+
+    
+        
+        .cate_item{
+            
+        padding-left: 0px;
+        padding-right: 0px;
+        text-align: center;
+        color: #666;
+       
+     }
+        
+              
 
     }
 
     .cate_right{
         flex: 1;
         overflow-y: auto;
+        background: #eeeeee;
+        ion-row{
+        margin-right: 8px;
+        margin-top: 8px;
+        background: #ffffff;
+
+        ion-col{
+            border:0.05rem solid #eee;
+            margin-left: -0.05rem;
+            margin-top: -0.05rem;
+            p{
+                text-align: center;
+                color:#666;
+            }
+            img{
+                display: block;
+                margin: 0 auto;
+                max-width: 90%;
+            }
+        }
+        ion-col:nth-child(3n){
+
+            border-right: 0px;
+        }
+        }
     }
 }
+
+.item-inner {
+    margin-right: 0 !important;
+}
+
+
+.active{
+    background: #eeeeee;
+}
+
+
+   
+// .table tr.active td {
+    
+//     color: white;
+//   }

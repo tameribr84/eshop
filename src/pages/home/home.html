@@ -14,6 +14,7 @@
   <ion-slides *ngIf="slideList.length>0" pager autoplay="3000">
     <ion-slide *ngFor="let item of slideList">
       <img [src]= "config.apiUrl + item.pic" />
+      <p></p>
     </ion-slide>
 
     <ion-slide style="background-color: green">
@@ -32,8 +33,9 @@
     <ion-scroll scrollX="true">
       <ul class="clearfix" [ngStyle]="{'width': popListWidth}" >
         <li *ngFor="let item of popList">
-          <img [src]="config.apiUrl + item.pic" />
+          <img [src]="config.apiUrl + item.s_pic" />
           <p> {{item.title}} </p>
+          <p><span>${{item.price}}</span></p>
         </li>
       </ul>
     </ion-scroll>
@@ -50,6 +52,7 @@
       <ion-col col-4 *ngFor="let item of prodList">
           <img [src]="config.apiUrl + item.pic" />
           <p> {{item.title}}</p>
+          <p><span>${{item.price}}</span></p>
 
       </ion-col>
     </ion-row>
