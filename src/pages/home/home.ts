@@ -1,8 +1,14 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+
+// Import Pages
 import { SearchPage } from '../search/search';
+import { PcontentPage } from '../pcontent/pcontent';
+
+
 import { HttpServiceProvider } from '../../providers/http-service/http-service';
 import { ConfigProvider } from '../../providers/config/config';
+
 
 @Component({
   selector: 'page-home',
@@ -10,11 +16,14 @@ import { ConfigProvider } from '../../providers/config/config';
 })
 export class HomePage {
 
+  public Pcontent = PcontentPage;
+
   public popList = [];
   public popListWidth = '';
   public searchPage = SearchPage;
   public slideList = [];
   public prodList = [];
+
 
 
   constructor(

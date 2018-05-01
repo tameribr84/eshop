@@ -1,0 +1,140 @@
+.p_content{
+    background: #ffffff;
+    .con_1 {
+        .p_img{
+            width: 100%;
+            height: 20rem;
+            img{
+                width: 100%;
+                height: 20rem;
+            }
+        }
+        .p_info{
+            background: #ffffff;
+            padding: 1rem;
+            .p_title{
+                h2{
+                    font-size: 1.6rem;
+                    margin: 0 auto;
+                }
+                p{
+                    font-size: 1.4rem;
+                    color: #666666;
+                }
+            }
+
+            .p_price{
+                .price {
+                    color: red;
+                    font-size: 1.6rem;
+                }
+
+                
+                .pre_price{
+                    color: #666666;
+                    text-decoration: line-through;
+                }
+
+
+            }
+        }
+
+        .p_attr{
+            padding: 1rem;
+            background: #ffffff;
+            .attr1{
+
+                span{
+                    display: inline-block;
+                    padding: .5rem 1rem;
+                    border:1px solid #eee;
+                    margin-right: .5rem;
+                    margin-bottom: .5rem;
+                    border-radius: .5rem;
+                }
+
+            }
+
+            .quantity{
+                padding-bottom: .5rem;
+                .cart_number{
+                    display: flex;
+                    width: 100px;
+                    float: right;
+                    .input_left,.input_right{
+                        width: 38px;
+                        text-align: center;
+                        height: 28px;
+                        line-height: 28px;
+                        background: #f8f8f8;
+                        border:1px solid #f8f8f8;
+                    }
+                    .input_center{
+                        flex: 1;
+                            height: 28px;
+                            line-height: 28px;    
+                            input{
+                                border:1px solid #f8f8f8;
+                                height: 28px;
+                                line-height: 28px;    
+                                width: 100%;
+                                text-align: center;
+                            }
+                    }
+                }
+            }
+            
+        }
+        .shipment_fee{
+            padding: 0 1rem;
+        }
+    }
+}
+
+
+
+
+.footer_bar{
+    display: flex;
+    .carticon{
+        position: relative;
+        width: 6.6rem;
+        text-align: center;
+        
+        ion-icon{
+            color: #999999;
+            font-size: 2.8rem;
+        }
+        p{
+            color: #999999;
+            font-size: 1.4rem;
+            margin: 0 auto;
+        }
+        ion-badge{
+            position: absolute;
+            right: .5rem;
+            top: 0rem
+        }
+
+    }
+
+    .addcart{
+        flex: 1;
+        height: 4.4rem;
+        line-height: 4.4rem;
+        text-align: center;
+        color: #ffffff;
+        background: orange;
+        font-size: 1.6rem;
+    }
+
+    .buy{
+        flex: 1;
+        height: 4.4rem;
+        line-height: 4.4rem;
+        text-align: center;
+        color: #ffffff;
+        background: red;
+        font-size: 1.6rem;
+    }
+}

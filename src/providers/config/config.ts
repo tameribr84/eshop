@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+
 /*
   Generated class for the ConfigProvider provider.
 
@@ -11,8 +12,13 @@ import { Injectable } from '@angular/core';
 export class ConfigProvider {
   public apiUrl = 'http://39.108.159.135/';
 
-  constructor(public http: HttpClient) {
+  constructor(
+    public http: HttpClient
+
+  ) {
     console.log('Hello ConfigProvider Provider');
+
+   
   }
 
 }

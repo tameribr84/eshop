@@ -37,13 +37,13 @@
       </p>
     </div>
 
-    <div class="search_history">
+    <div class="search_history" *ngIf="historyList.length > 0">
       <h3>Search History</h3>
       <ion-list>
         <!-- <button ion-item *ngFor="let item of search_list">
         {{item}}
       </button> -->
-        <ion-item *ngFor="let item of search_list" (click)="onItem()">{{item}}</ion-item>
+        <ion-item *ngFor="let item of historyList" (press)="removeHistory(item)" (tap)="goSearch(item)">{{item}}</ion-item>
       </ion-list>
 
       <button ion-button icon-left outline>
@@ -65,9 +65,14 @@
     </ion-list>
 
 
-    <ion-infinite-scroll (ionInfinite)="loadMore($event)">
-      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    <ion-infinite-scroll [enabled]='hasData' (ionInfinite)="loadMore($event)">
+      <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data"
+      ></ion-infinite-scroll-content>
     </ion-infinite-scroll>
+
+
   </div>
 
 

@@ -26,6 +26,7 @@ import { RegisterpasswordPage} from '../pages/registerpassword/registerpassword'
 
 // Import Search Page
 import { SearchPage } from '../pages/search/search';
+import { PcontentPage } from '../pages/pcontent/pcontent';
 
 // Import Product List Page
 import { ProductlistPage } from '../pages/productlist/productlist';
@@ -33,6 +34,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ConfigProvider } from '../providers/config/config';
 import { HttpServiceProvider } from '../providers/http-service/http-service';
+import { StorageProvider } from '../providers/storage/storage';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { HttpServiceProvider } from '../providers/http-service/http-service';
     RegistercodePage,
     RegisterpasswordPage,
     SearchPage,
-    ProductlistPage
+    ProductlistPage,
+    PcontentPage
   ],
   imports: [
     BrowserModule,
@@ -74,14 +77,16 @@ import { HttpServiceProvider } from '../providers/http-service/http-service';
     RegistercodePage,
     RegisterpasswordPage,
     SearchPage,
-    ProductlistPage
+    ProductlistPage,
+    PcontentPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ConfigProvider,
-    HttpServiceProvider
+    HttpServiceProvider,
+    StorageProvider
   ]
 })
 export class AppModule {}
